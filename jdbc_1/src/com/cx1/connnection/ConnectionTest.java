@@ -1,4 +1,4 @@
-package com.cx.connnection;
+package com.cx1.connnection;
 
 import org.junit.Test;
 

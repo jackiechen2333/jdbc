@@ -1,4 +1,4 @@
-package com.cx.statement.crud;
+package com.cx2.statement.crud;
 
 /**
  * @author cx

@@ -1,4 +1,4 @@
-package com.cx.statement.crud;
+package com.cx2.statement.crud;
 
 import java.io.InputStream;
 import java.lang.reflect.Field;
@@ -24,7 +24,6 @@ public class StatementTest {
     @Test
     public void testLogin() {
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("请输入用户名：");
         String user = scanner.nextLine();
         System.out.print("请输入密码：");

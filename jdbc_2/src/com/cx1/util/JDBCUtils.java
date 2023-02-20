@@ -1,4 +1,4 @@
-package com.cx3.util;
+package com.cx1.util;
 
 import java.io.InputStream;
 import java.sql.*;
@@ -39,6 +39,24 @@ public class JDBCUtils {
         return connection;
     }
 
+    public static void closeResource(Connection connection){
+        try {
+            if(connection != null)
+                connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void closeResource(Statement preparedStatement){
+        try {
+            if(preparedStatement != null)
+                preparedStatement.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static void closeResource(Connection connection, Statement preparedStatement){
         try {
             if(preparedStatement != null)
@@ -76,4 +94,18 @@ public class JDBCUtils {
     }
 
 
+    public static void closeResource(PreparedStatement preparedStatement, ResultSet resultSet) {
+        try {
+            if(preparedStatement != null)
+                preparedStatement.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            if (resultSet != null)
+                resultSet.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
